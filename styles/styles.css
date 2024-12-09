@@ -771,7 +771,7 @@ h4, .h4 {
   padding-left: 32px;
   background: linear-gradient(270deg, rgb(248, 248, 248), rgb(255, 255, 255) 98.614%);
 }
-@media (max-width: 767px) {
+@media (max-width: 1119px) {
   .title__text {
     padding-left: 24px;
   }
