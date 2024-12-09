@@ -1,0 +1,23 @@
+.purple-button {
+    position: relative;
+    background-color: var(--color-purple);
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: none;
+    transition-duration: 0.2s;
+
+    @include hover {
+            opacity: 0.7;
+            
+        }
+}
+
+.purple-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    
+}

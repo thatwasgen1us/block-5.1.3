@@ -1,0 +1,145 @@
+.wrapper {
+    max-width: 1120px;
+    margin: 0 auto;
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 16px;
+        column-gap: 32px;
+        padding-inline: 32px;
+        padding-block: 24px;
+
+        @include tablet {
+            grid-template-columns: repeat(3, 1fr);
+            padding-inline: 24px;
+            padding-block: 16px;
+        }
+
+        @include mobile {
+            display: flex;
+            overflow-x: scroll;
+            column-gap: 16px;
+            row-gap: none;
+        }
+    }
+
+    &__item {
+        position: relative;
+        box-sizing: border-box;
+        border: 1px solid rgb(234, 234, 234);
+        border-radius: 6px;
+        background: rgb(255, 255, 255);
+        width: 240px;
+        height: 72px;
+
+        
+        
+        @include tablet {
+            width: 224px;
+        } 
+        
+        @include mobile {
+            width: 240px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 16px;
+        height: 72px;
+        align-items: center;
+
+        @include tablet {
+                width: 224px;
+            }
+    }
+
+    &__button {
+        border: none;
+        color: rgb(27, 28, 33);
+        font-family: TT Lakes;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-align: left;
+        background-color: inherit;
+        margin-left: 32px;
+
+        @include mobile {
+            display: none;
+        }
+
+        &::before {
+            content: url(../icons/two-arrows-bottom.svg);
+            margin-right: 8px;
+        }
+    }
+
+
+} 
+
+.title {
+
+    &__text {
+        color: rgb(126, 126, 130);
+        font-family: TT Lakes;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-align: left;
+        text-transform: uppercase;
+        padding-block: 16px;
+        padding-left: 32px;
+        background: linear-gradient(270.00deg, rgb(248, 248, 248), rgb(255, 255, 255) 98.614%);
+    }
+}
+
+.mobile-scroll {
+    position: relative;
+    padding-block: 6px;
+
+    @include mobile-above {
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 12px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__item {
+        width: 12px;
+        height: 12px;
+        background-color: #DDDDDD;
+        border-radius: 50%;
+
+
+        &:active {
+            background-color: #B5B6BC;
+
+        }
+    }
+
+    &__link {
+        width: 12px;
+            height: 12px;
+    }
+}
+
+#mores {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 16px;
+    column-gap: 24px;
+    padding-inline: 32px;
+    padding-bottom: 24px;
+}
+

@@ -1,0 +1,99 @@
+.services {
+
+    &__title {
+        position: relative;
+        margin: 26px 21px 24px 11px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 40px;
+        transform: rotate(180.00deg);
+        background-color: var(--color-blue);
+        left: -10px;
+        border-radius: 15px 0 0 15px;
+    }
+        
+
+    &__title--text {
+        color: var(--color-dark);
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: -0.6px;
+        text-align: left;
+        white-space: nowrap;
+        margin-left: 32px;
+    }
+    
+
+    &__list {
+        display: flex;
+        overflow-x: scroll;
+        margin-inline: 11px;
+
+        @include mobile-above{
+            margin-inline: 24px;
+        }
+
+        @include tablet-above {
+            overflow-x: visible;
+            flex-wrap: wrap;
+            min-width: 1063px;
+            margin-inline: 32px 25px;
+        }
+    }
+
+    &__item--button {
+        color: var(--color-gray);
+        font-family: TT Lakes;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-align: left;
+        border: 2px solid transparent;
+        border-radius: 6px;
+        background: var(--color-light);
+        height: 40px;
+        white-space: nowrap;
+
+        @include tablet-above {
+                padding-inline: 11px;
+            }
+    }
+
+    &__item--button:active {
+        border: 2px solid var(--color-blue-light);
+        padding: 8px;
+
+        @include hover {
+                border: 2px solid var(--color-blue-light);
+            }
+    }
+
+    &__callback {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet {
+                display: none;
+            }
+
+        &--text {
+            display: block;
+            margin-right: 8px;
+        }
+
+        &--button:not(:last-child){
+            margin-right: 32px;
+        }
+    }
+}

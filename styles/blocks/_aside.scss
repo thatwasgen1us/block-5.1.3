@@ -1,0 +1,133 @@
+.aside {
+    max-width: 320px;
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.main {
+    margin-top: 46px;
+    flex: 1;
+}
+
+.main__title {
+    position: relative;
+    margin: 26px 21px 24px 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 40px;
+        transform: rotate(180deg);
+        background-color: var(--color-blue);
+        left: -10px;
+        border-radius: 15px 0 0 15px;
+    }
+}
+
+
+.main__title--text {
+    position: absolute;
+    top: -60px;
+    left: -8px;
+    margin: 50px 24px 32px 24px;
+    color: var(--color-gray);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+
+
+.main__list {
+    display: flex;
+    padding-top: 32px;
+    flex-direction: column;
+    row-gap: 32px;
+    padding-inline: 24px;
+}
+
+.main__item {
+    transition-duration: 0.2s;
+
+    @include hover {
+        opacity: 0.8;
+    }
+}
+
+.main__link {
+    color: var(--color-dark);
+        font-family: TT Lakes;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-align: left;
+}
+
+
+.footer {
+    padding-left: 24px;
+    margin-block: 24px;
+}
+
+.footer__communication {
+    display: flex;
+    column-gap: 16px;
+}
+
+
+.footer__email {
+    margin-top: 16px;
+    margin-bottom: 12px;
+    color: var(--color-dark);
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+}
+
+.footer__telephone {
+    color: var(--color-dark);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    text-align: left;
+}
+
+
+.footer__language {
+    display: flex;
+    column-gap: 7px;
+    margin-top: 40px;
+}
+
+.footer__language--ru {
+    &:active {
+        opacity: 0.7;
+    }
+}
+
+.footer__language--en {
+    &:active {
+            opacity: 0.7;
+        }
+}
+
+.footer__language--ch {
+    &:active {
+            opacity: 0.7;
+        }
+}
